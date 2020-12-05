@@ -1,0 +1,211 @@
+  * {
+    font-family: serif;
+  }
+  h2, h3 {
+    font-family: 'Bree Serif', serif;
+  }
+  body {
+    margin: 0 0 0 0;
+}
+  .nestedGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* control W of Grid */
+    grid-template-rows: auto;/* control H of Grid */
+    grid-auto-rows: minmax(100px,auto); /*if we have contant H be auto*/
+    justify-content: center; 
+    margin: 50px;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+  header > * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:20%;
+  }
+  .nestedGrid > *{
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .container > * {
+    color:gray;
+    /* border: 1px solid red; */
+    padding: 20px;
+  }
+  .card1 {
+    border: none;
+  }
+  .card2{
+    grid-column: 2/4;
+    box-shadow: 10px 10px 5px #EBDBD4;
+  } 
+  .card3 , .card4 {
+    grid-column: 1/4;
+  }
+  .card4 > * {
+    grid-column: 1/4;
+    margin: 3%;
+  } 
+  .card8 > * {
+    margin: 5%;
+  }
+  .card9 > * {
+    margin: 10%;
+  }
+  .card8 {
+    grid-column: 1/3; 
+  }
+  .card10{
+    grid-row: 6/8;
+    grid-column: 1/3;
+    box-shadow: 10px 10px 5px #EBDBD4;
+  }
+  .card11 , .card12 , .card5 , .card6 , .card7 {
+    box-shadow: 10px 10px 5px #EBDBD4;
+
+  }
+  .ul-list{
+    display:flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0%;
+  }
+  li > * {
+    text-decoration: none;
+    color: black;
+  }
+  .ul-list > * {
+    margin: 10px;
+  }
+  .SM {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .card2 > * , .card5 > * , .card6 > * , a > img , 
+  .card7 > * , .card10 > * , .card11 > * , .card12 > * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .nesCardGeid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /* control W of Grid */
+    grid-auto-rows: minmax(100px,auto); /*if we have contant H be auto*/
+    column-gap: 20%;
+    margin:3%;
+  }
+  .buttonInside{
+    position:relative;
+    float:center;
+  }
+  input{
+    height:100%;
+    width:100%;
+    padding-left:10px;
+    border-radius: 4px;
+    border:none;outline:none;
+  }
+  button{
+    position:absolute;
+    right: 0px;
+    top: 5px;
+    border:none;
+    height:90%;
+    border-radius:10%;
+    outline:none;
+    text-align:center;
+    font-weight:bold;
+  }
+  button:hover{
+    cursor:pointer;
+  }
+  #email{
+    display:none;
+    font-style:italic;
+    font-size:0.8em;
+  }
+  .SM > *{
+    margin: 10px;
+  }
+  header{
+      grid-area:hd;
+      background: #AA7C7A;
+    }
+  footer{
+      grid-area: ft;  
+      background: #AA7C7A;
+    }
+  nav{
+      grid-area: nav;
+      background: #EBDBD4;
+    }
+  main{
+      grid-area: main;
+      background: #EBEBE0;
+    }
+
+    /* PostBlog Style */
+    blockquote {
+      margin-left: -0.75rem;
+      margin-right: 0;
+      padding-left: 1.375em;
+      border-left: 0.375em solid #7B8898;
+      color: #51555a;
+      font-style: italic;
+      line-height: 1.5; 
+    }
+    .contantPost {
+      margin: 10%;
+    }
+    p {
+      color: black;
+    }
+
+      /*Small Screens*/
+  @media (max-width:800px) { 
+    .container{
+          display:grid;
+          grid-template-columns:  repeat(3, 100px);
+          grid-template-rows: auto;
+          grid-auto-rows: minmax(auto,auto);
+          grid-template-areas: 
+          "hd hd hd hd "
+          "nav nav nav nav"
+          "main main main main "
+          "ft ft ft ft ";
+          /* border: 2px solid rgb(199, 72, 33); */
+    }
+    h2 {
+      font-size: x-large;
+    }
+    p , blockquote , li > a {
+      font-size: large;
+    }
+  }
+    /* Large Screens */
+    @media (min-width:801px) {
+      .container{
+        display:grid;
+        grid-template-columns:  repeat(3, 200px);
+        grid-template-rows: auto;
+        grid-auto-rows: minmax(200,auto);
+        grid-template-areas: 
+        "hd hd hd hd "
+        "nav nav nav nav"
+        "main main main main"
+        "main main main main"
+        "main main main main "
+        "ft ft ft ft ";
+        /* border: 2px solid rgb(119, 50, 77); */
+      }
+      h2 {
+        font-size: xx-large;
+      }
+      p , blockquote , li > a {
+        font-size: x-large;
+      }
+    }
