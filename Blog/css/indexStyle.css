@@ -1,3 +1,10 @@
+    /* Small Screens */
+@import '/css/smallScreens.css'; 
+/*Middle Screens*/
+@import '/css/middleScreens.css'; 
+/* Large Screens */
+@import '/css/largeScreens.css';
+
   * {
     font-family: serif;
   }
@@ -158,54 +165,33 @@
       font-style: italic;
       line-height: 1.5; 
     }
+    .titlePost {
+      margin-left: 20%;
+    }
     .contantPost {
-      margin: 10%;
+      margin: 5%;
+      display:flex;
+      /* list-style: none; */
+      flex-direction: row;
+      justify-content: center;
+      /* padding: 0%; */
+      gap: 10%;
     }
     p {
       color: black;
     }
-
-      /*Small Screens*/
-  @media (max-width:800px) { 
-    .container{
-          display:grid;
-          grid-template-columns:  repeat(3, 100px);
-          grid-template-rows: auto;
-          grid-auto-rows: minmax(auto,auto);
-          grid-template-areas: 
-          "hd hd hd hd "
-          "nav nav nav nav"
-          "main main main main "
-          "ft ft ft ft ";
-          /* border: 2px solid rgb(199, 72, 33); */
+    figure img {
+      width: 100%;
+      /* text-align: center; */
+      /* font-style: italic; */
+      /* font-size: smaller; */
+      text-indent: 0;
+      border: thin silver solid;
+      margin: 3%;
+      padding: 5%;
     }
-    h2 {
-      font-size: x-large;
-    }
-    p , blockquote , li > a {
-      font-size: large;
-    }
-  }
-    /* Large Screens */
-    @media (min-width:801px) {
-      .container{
-        display:grid;
-        grid-template-columns:  repeat(3, 200px);
-        grid-template-rows: auto;
-        grid-auto-rows: minmax(200,auto);
-        grid-template-areas: 
-        "hd hd hd hd "
-        "nav nav nav nav"
-        "main main main main"
-        "main main main main"
-        "main main main main "
-        "ft ft ft ft ";
-        /* border: 2px solid rgb(119, 50, 77); */
-      }
-      h2 {
-        font-size: xx-large;
-      }
-      p , blockquote , li > a {
-        font-size: x-large;
-      }
+    figcaption {
+      text-align: center; 
+      font-style: italic;
+      font-size: smaller; 
     }

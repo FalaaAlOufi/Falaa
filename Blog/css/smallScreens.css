@@ -1,0 +1,21 @@
+      @media screen and (max-width:600px) { 
+        .container{
+              display:grid;
+              grid-template-columns:  repeat(3, 50px);
+              grid-template-rows: auto;
+              grid-auto-rows: minmax(auto,auto);
+              grid-template-areas: 
+              "hd hd hd hd "
+              "nav nav nav nav"
+              "main main main main "
+              "ft ft ft ft ";
+              /* border: 2px solid rgb(199, 72, 33); */
+        }
+        h2 {
+          font-size: large;
+        }
+        p , blockquote , li > a {
+          font-size: medium;
+        }
+        
+      }
